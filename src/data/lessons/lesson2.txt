@@ -1,0 +1,167 @@
+/**
+*  HSK 标准教程 5（上）· 第二课
+*  留串钥匙给父母 (Leaving a Bunch of Keys to Our Parents)
+*  数据结构说明：
+*  text[].html：课文段落，<strong> 标签标注本课重点词汇
+*  vocabulary[]：生词卡数据 (完整覆盖课文与核心练习)
+*  grammar[]：语法点与词语辨析
+*  exercises：课后原版练习题（填空、选择、位置选择）
+*  topics：话题延展与命题写作
+*/ 
+
+export default { 
+    // ─── 基本信息 ────────────────────────────────────────────────── 
+    id: "lesson2", 
+    lessonNumber: 2, 
+    title: "留串钥匙给父母", 
+    titleEn: "Leaving a Bunch of Keys to Our Parents", 
+    book: "HSK 标准教程 5（上）",
+
+    // ─── 课文 (100% 原文还原) ────────────────────────────────────── 
+    text: [ 
+        { 
+            id: 1, 
+            html: "去年，在我和妻子的努力下，我们终于用<strong>打工</strong><strong>挣</strong>的钱，在<strong>县</strong>里买了一<strong>套</strong>新房。新房<strong>装修</strong>完，父母第一次走进新房时，高兴得<strong>不得了</strong>。妻子提出留一串钥匙给父母，可他们拒绝了。那天，父亲喝<strong>醉</strong>了，等他醒时，天色已晚。我和妻子<strong>强烈</strong>留父母在新房住一<strong>夜</strong>，第二天再回，但他们仍<strong>坚决</strong>坐上了最后一趟回老家的车。", 
+        }, 
+        { 
+            id: 2, 
+            html: "一段时间后，我和妻子又准备去外地打工，新房只能上<strong>锁</strong>空着。<strong>临</strong>走那天，父亲从老家赶来送我们。父亲<strong>悄悄</strong>把我拉到一边说：“你妈说了，你还是留一串新房的钥匙给我们，要是我和你妈什么时候想来了，就来住上几天，顺便给你们<strong>晒</strong>晒<strong>被子</strong>，打扫打扫卫生。”父亲说这话时，轻声细语，还红着脸，像个害羞的孩子。", 
+        }, 
+        { 
+            id: 3, 
+            html: "转眼又是半年，我们回家时是一个深冬的夜里。下了<strong>长途</strong>车，儿子被<strong>冻</strong>得大哭。我和妻子<strong>想象</strong>着打开家门满是<strong>灰尘</strong>、冷冷清清的景象，觉得心里发寒。来到楼下，抬头一看，却发现自家<strong>亮</strong>着灯光。上了楼，开门的竟是<strong>微笑</strong>着的父母，<strong>温暖</strong>的气息<strong>立刻</strong><strong>扑</strong>面而来：室内打扫得干干净净，暖气开着，水已温热，<strong>卧室</strong>床上的被子已<strong>铺</strong>好，厨房里<strong>飘</strong>来<strong>阵</strong>阵饭菜香……", 
+        },
+        { 
+            id: 4, 
+            html: "父亲说：“你妈昨天接到电话，知道你们今晚回来，今天来新房忙了一天了。”原来父母要我留下串钥匙，只是为了让我们回来时，能立刻<strong>感受</strong>到家的温暖！我鼻子一酸，<strong>流泪</strong>了…… (注：原文为“流下了热泪……”，此处标引流泪)", 
+        }
+    ],
+
+    // ─── 生词 (大纲词汇及课文重点词汇) ───────────────────────── 
+    vocabulary: [ 
+        { id: 1,  word: "打工",     pinyin: "dǎ gōng",    pos: "v.",    meaning: "to work for others, to do a temporary job" }, 
+        { id: 2,  word: "挣",       pinyin: "zhèng",      pos: "v.",    meaning: "to earn" }, 
+        { id: 3,  word: "县",       pinyin: "xiàn",       pos: "n.",    meaning: "county" }, 
+        { id: 4,  word: "套",       pinyin: "tào",        pos: "m.",    meaning: "set, suite" }, 
+        { id: 5,  word: "装修",     pinyin: "zhuāngxiū",  pos: "v.",    meaning: "to decorate (a house, room, etc.)" },
+        { id: 6,  word: "不得了",   pinyin: "bùdéliǎo",   pos: "adj.",  meaning: "extremely, exceedingly" },
+        { id: 7,  word: "醉",       pinyin: "zuì",        pos: "v.",    meaning: "to be drunk" },
+        { id: 8,  word: "强烈",     pinyin: "qiángliè",   pos: "adj.",  meaning: "strong and vehement" },
+        { id: 9,  word: "夜",       pinyin: "yè",         pos: "n.",    meaning: "night" },
+        { id: 10, word: "坚决",     pinyin: "jiānjué",    pos: "adj.",  meaning: "firm, determined" },
+        { id: 11, word: "锁",       pinyin: "suǒ",        pos: "n./v.", meaning: "lock; to lock up" }, 
+        { id: 12, word: "临",       pinyin: "lín",        pos: "prep.", meaning: "about to, just before" }, 
+        { id: 13, word: "悄悄",     pinyin: "qiāoqiāo",   pos: "adv.",  meaning: "quietly, secretly" }, 
+        { id: 14, word: "晒",       pinyin: "shài",       pos: "v.",    meaning: "to dry in the sun" }, 
+        { id: 15, word: "被子",     pinyin: "bèizi",      pos: "n.",    meaning: "quilt" }, 
+        { id: 16, word: "长途",     pinyin: "chángtú",    pos: "adj.",  meaning: "long-distance" }, 
+        { id: 17, word: "冻",       pinyin: "dòng",       pos: "v.",    meaning: "to freeze, to feel very cold" }, 
+        { id: 18, word: "想象",     pinyin: "xiǎngxiàng", pos: "v.",    meaning: "to imagine" }, 
+        { id: 19, word: "灰尘",     pinyin: "huīchén",    pos: "n.",    meaning: "dust, dirt" },
+        { id: 20, word: "亮",       pinyin: "liàng",      pos: "adj./v.",meaning: "bright; to shine" },
+        { id: 21, word: "微笑",     pinyin: "wēixiào",    pos: "v./n.", meaning: "to smile; smile" },
+        { id: 22, word: "温暖",     pinyin: "wēnnuǎn",    pos: "adj./v.",meaning: "warm; to make sb./sth. warm" },
+        { id: 23, word: "立刻",     pinyin: "lìkè",       pos: "adv.",  meaning: "at once, immediately" },
+        { id: 24, word: "扑",       pinyin: "pū",         pos: "v.",    meaning: "to pounce on, to dash at" },
+        { id: 25, word: "卧室",     pinyin: "wòshì",      pos: "n.",    meaning: "bedroom" },
+        { id: 26, word: "铺",       pinyin: "pū",         pos: "v.",    meaning: "to spread, to unfold" },
+        { id: 27, word: "飘",       pinyin: "piāo",       pos: "v.",    meaning: "to float (in the air), to waft" },
+        { id: 28, word: "阵",       pinyin: "zhèn",       pos: "m.",    meaning: "used for a short period or spell of an occurrence or action" },
+        { id: 29, word: "感受",     pinyin: "gǎnshòu",    pos: "v./n.", meaning: "to feel; feeling" },
+        { id: 30, word: "流泪",     pinyin: "liú lèi",    pos: "v.",    meaning: "to shed tears" },
+        { id: 31, word: "马上",     pinyin: "mǎshàng",    pos: "adv.",  meaning: "right off, immediately" },
+        { id: 32, word: "断",       pinyin: "duàn",       pos: "v.",    meaning: "to cut off, to break" },
+        { id: 33, word: "偷偷",     pinyin: "tōutōu",     pos: "adv.",  meaning: "secretly" }
+    ],
+
+    // ─── 语法与辨析 ──────────────────────────────────────────────── 
+    grammar: [ 
+        { 
+            id: 1, 
+            title: "以来", 
+            subtitle: "名词 — 表示从过去某时到现在的这段时间", 
+            color: "#2563eb", 
+            meanings: [ 
+                { label: "时间范围", examples: [ "改革开放以来，中国发生了巨大的变化。", "因此长年以来，父母很少离开老屋。" ] } 
+            ] 
+        }, 
+        { 
+            id: 2, 
+            title: "临", 
+            subtitle: "动词/介词 — 靠近、面对 / 将要", 
+            color: "#7c3aed", 
+            meanings: [ 
+                { label: "靠近、面对", examples: ["我想买一套不临街的房子，这样不会太吵。"] },
+                { label: "（时/前）表示快到某一行为发生的时间", examples: ["临走那天，父亲从老家赶来送我们。"] }
+            ] 
+        },
+        { 
+            id: 3, 
+            title: "立刻", 
+            subtitle: "副词 — 表示马上，强调一个动作紧接着前一个动作发生", 
+            color: "#059669", 
+            meanings: [ 
+                { label: "马上行动", examples: [ "上了楼，开门的竟是微笑着的父母，温暖的气息立刻扑面而来……", "那两只羊一见到青草，就立刻去吃草了。" ] } 
+            ] 
+        },
+        {
+            id: 4,
+            title: "词语辨析：悄悄 vs 偷偷",
+            color: "#dc2626",
+            comparison: {
+                common: "都是副词，都有做事情不让人发现的意思。例如：他悄悄/偷偷地走了出去。",
+                diff1: "【悄悄】强调声音很小。例如：父亲悄悄把我拉到一边说话。",
+                diff2: "【偷偷】强调行为不愿被人知道。例如：他谁也没告诉，偷偷去旅行了。"
+            }
+        }
+    ],
+
+    // ─── 练习 (原版提取) ────────────────────────────────────────── 
+    exercises: { 
+        fill: { 
+            title: "练习一：选择合适的词语填空", 
+            words: ["断", "套", "锁", "挣", "长途", "打工", "强烈", "想象"], 
+            questions: [ 
+                { q: "① 你觉得我穿这___西服去电视台参加节目怎么样？", a: "套" }, 
+                { q: "② 我不能___她喝醉了会是什么样子。", a: "想象" }, 
+                { q: "③ 国际___电话很贵，现在我们一般上网聊天儿。", a: "长途" }, 
+                { q: "④ 因为同学们___要求，我们决定这个周末出去活动。", a: "强烈" },
+                { q: "⑤ 房门被反___上了，他从窗户里跳出来，把腿摔___了。", a: "锁, 断" },
+                { q: "⑥ 暑假的时候我想去___两个月，___点儿钱。", a: "打工, 挣" }
+            ] 
+        }, 
+        choice: { 
+            title: "练习二：选择正确答案", 
+            questions: [ 
+                { q: "① 他的态度很___，恐怕不会改变主意了。", options: ["A. 坚决", "B. 坚持"], a: "A. 坚决" }, 
+                { q: "② 只有一个星期了，春节___就要到了。", options: ["A. 立刻", "B. 马上"], a: "B. 马上" },
+                { q: "③ 最近气温太低，河里的水都被___住了。", options: ["A. 冻", "B. 冷"], a: "A. 冻" },
+                { q: "④ 女服务员给了我一个___的微笑。", options: ["A. 暖和", "B. 温暖"], a: "B. 温暖" }
+            ] 
+        },
+        position: {
+            title: "练习三：给括号里的词选择适当的位置",
+            questions: [
+                { q: "① 虽然她全身 A 瘫痪了，但 B 我会照顾 C 她 D 。 (一辈子)", a: "D" },
+                { q: "② A 了，他们俩 B 大吵 C 了一架 D ！ (不得了)", a: "A" },
+                { q: "③ 他 A 病了， B 老师和同学们 C 把他 D 送进了医院。 (立刻)", a: "C" },
+                { q: "④ A 花园里 B 飘来 C 花 D 香。 (一阵)", a: "C" }
+            ]
+        }
+    },
+
+    // ─── 话题延展 ────────────────────────────────────────────────── 
+    topics: { 
+        questions: [ 
+            { q: "你同意“父母对子女的爱是无私和伟大的”这种说法吗？", hint: "结合自己的经历谈谈感受。" },
+            { q: "你觉得课文中的这对父母一开始拒绝接受孩子新房钥匙的原因是什么？", hint: "不想给孩子添麻烦、不习惯城市生活等。" },
+            { q: "请说说你记得最清楚的父母关心你、爱你的一件事。", hint: "生病时的照顾、临走时的嘱咐、做你最爱吃的菜等。" }
+        ], 
+        writing: { 
+            title: "命题写作：最深的爱", 
+            prompt: "请以“最深的爱”为题写一段话，谈谈你对课文中父母的表现有什么看法，并说说你和自己父母亲的关系。尽量用上本课所学的生词，字数不少于100字。", 
+            minWords: 100, 
+            suggestedWords: [ "打工", "装修", "悄悄", "温暖", "感受", "流泪", "坚决" ] 
+        } 
+    } 
+};

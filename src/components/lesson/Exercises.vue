@@ -125,6 +125,59 @@
       </div>
     </section>
 
+    <!-- ── 练习三：选位置（可选） ─────────────────────────── -->
+    <template v-if="exercises.position">
+      <v-divider class="my-8" />
+      <section class="exercise-section">
+        <div class="section-header section-header--teal">
+          <span class="section-header__badge">练习三</span>
+          <span class="section-header__title">{{ exercises.position.title }}</span>
+        </div>
+
+        <div class="position-list">
+          <div
+            v-for="(question, qIndex) in exercises.position.questions"
+            :key="qIndex"
+            class="position-item"
+            :class="{
+              'position-item--correct': posChecked && posAnswers[qIndex] === question.a,
+              'position-item--wrong':   posChecked && posAnswers[qIndex] !== question.a,
+            }"
+          >
+            <p class="position-item__question">{{ question.q }}</p>
+            <div class="position-item__options">
+              <button
+                v-for="opt in ['A', 'B', 'C', 'D']"
+                :key="opt"
+                class="option-btn"
+                :class="posOptionClass(qIndex, opt, question.a)"
+                :disabled="posChecked"
+                @click="selectPos(qIndex, opt)"
+              >
+                {{ opt }}
+              </button>
+            </div>
+            <div
+              v-if="posChecked && posAnswers[qIndex] !== question.a"
+              class="fill-item__hint"
+            >
+              正确答案：<strong>{{ question.a }}</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise-actions">
+          <v-btn depressed color="teal" dark small @click="checkPos">检查答案</v-btn>
+          <v-btn depressed color="grey lighten-3" small @click="resetPos">重置</v-btn>
+          <transition name="fade">
+            <span v-if="posChecked" class="score-badge score-badge--teal">
+              {{ posScore }} / {{ exercises.position.questions.length }} 正确
+            </span>
+          </transition>
+        </div>
+      </section>
+    </template>
+
   </div>
 </template>
 
@@ -149,6 +202,8 @@ export default {
       fillChecked: false,
       choiceAnswers: {},
       choiceChecked: false,
+      posAnswers: {},
+      posChecked: false,
       downloading: false,
     };
   },
@@ -161,6 +216,12 @@ export default {
     choiceScore() {
       return this.exercises.choice.questions.filter(
         (q, i) => this.choiceAnswers[i] === q.a
+      ).length;
+    },
+    posScore() {
+      if (!this.exercises.position) return 0;
+      return this.exercises.position.questions.filter(
+        (q, i) => this.posAnswers[i] === q.a
       ).length;
     },
   },
@@ -196,6 +257,20 @@ export default {
       }
       if (opt === correctAnswer) return "option-btn--correct";
       if (this.choiceAnswers[qIndex] === opt) return "option-btn--wrong";
+      return "";
+    },
+    selectPos(qIndex, opt) {
+      if (this.posChecked) return;
+      this.$set(this.posAnswers, qIndex, opt);
+    },
+    checkPos() { this.posChecked = true; },
+    resetPos() { this.posChecked = false; this.posAnswers = {}; },
+    posOptionClass(qIndex, opt, correctAnswer) {
+      if (!this.posChecked) {
+        return this.posAnswers[qIndex] === opt ? "option-btn--selected" : "";
+      }
+      if (opt === correctAnswer) return "option-btn--correct";
+      if (this.posAnswers[qIndex] === opt) return "option-btn--wrong";
       return "";
     },
     async downloadAsImage() {
@@ -253,6 +328,7 @@ export default {
 
   &--blue &__badge  { background: #2563eb; }
   &--purple &__badge { background: #7c3aed; }
+  &--teal &__badge  { background: #0d9488; }
 }
 
 // ── 词语库 ────────────────────────────────────────────────────
@@ -383,10 +459,53 @@ export default {
     background: #ede9fe;
     color: #5b21b6;
   }
+
+  &--teal {
+    background: #ccfbf1;
+    color: #0f766e;
+  }
 }
 
 .fade-enter-active, .fade-leave-active { transition: opacity 0.3s; }
 .fade-enter, .fade-leave-to { opacity: 0; }
+
+// ── 选位置题 ──────────────────────────────────────────────────
+.position-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.position-item {
+  padding: 16px 18px;
+  border-radius: 10px;
+  border: 1.5px solid #e5e7eb;
+  background: #fff;
+  transition: border-color 0.2s, background 0.2s;
+
+  &--correct {
+    background: #f0fdf4;
+    border-color: #86efac;
+  }
+
+  &--wrong {
+    background: #fff7ed;
+    border-color: #fed7aa;
+  }
+
+  &__question {
+    font-size: 15px;
+    color: #1f2937;
+    line-height: 1.8;
+    margin-bottom: 12px;
+  }
+
+  &__options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
 
 // ── 下载区 ────────────────────────────────────────────────────
 .download-bar {

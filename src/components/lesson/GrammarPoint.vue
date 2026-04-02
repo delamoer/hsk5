@@ -57,6 +57,24 @@
           {{ ex }}
         </div>
       </div>
+
+      <!-- 词语辨析 comparison -->
+      <div v-if="current.comparison" class="comparison-block">
+        <div class="comparison-block__heading" :style="{ color: current.color }">
+          词语辨析
+        </div>
+        <p v-if="current.comparison.common" class="comparison-block__common">
+          {{ current.comparison.common }}
+        </p>
+        <div
+          v-for="(val, key) in comparisonDiffs(current.comparison)"
+          :key="key"
+          class="comparison-block__diff"
+          :style="{ borderLeftColor: current.color }"
+        >
+          {{ val }}
+        </div>
+      </div>
     </v-card>
   </div>
 </template>
@@ -78,6 +96,13 @@ export default {
   computed: {
     current() {
       return this.grammar[this.activeIndex] || null;
+    },
+    comparisonDiffs() {
+      return (comparison) => {
+        return Object.entries(comparison)
+          .filter(([k]) => k.startsWith("diff"))
+          .map(([, v]) => v);
+      };
     },
   },
 };
@@ -154,6 +179,43 @@ export default {
     padding-left: 12px;
     border-left: 2px dashed #d1d5db;
     margin-bottom: 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ── 词语辨析 ──────────────────────────────────────────────────
+.comparison-block {
+  margin-top: 8px;
+  padding: 18px 20px;
+  background: #fafafa;
+  border-radius: 10px;
+  border: 1.5px dashed #e5e7eb;
+
+  &__heading {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  &__common {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 10px;
+  }
+
+  &__diff {
+    border-left: 3px solid;
+    padding: 8px 14px;
+    font-size: 14px;
+    color: #1f2937;
+    line-height: 1.8;
+    margin-bottom: 8px;
+    border-radius: 0 6px 6px 0;
+    background: #fff;
 
     &:last-child {
       margin-bottom: 0;

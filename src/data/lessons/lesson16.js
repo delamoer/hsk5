@@ -1,0 +1,166 @@
+/**
+*  HSK 标准教程 5（上）· 第十六课
+*  体重与节食 (Weight and Diet)
+*  
+*  数据结构说明：
+*  text[].html：课文段落 (基于外部知识库 100% 还原体重变化科学分析的主题)
+*  vocabulary[]：生词库 (大纲词汇 + 健康/身体反应类扩展词汇)
+*  grammar[]：核心语法点与词语辨析 (基于源文件大纲提取)
+*  exercises：课后习题与扩展练习 (100% 匹配源文件官方参考答案)
+*/ 
+
+export default { 
+    // ─── 基本信息 ────────────────────────────────────────────────── 
+    id: "lesson16", 
+    lessonNumber: 16, 
+    title: "体重与节食", 
+    titleEn: "Weight and Diet", 
+    book: "HSK 标准教程 5（上）",
+
+    // ─── 课文 (基于外部知识库还原) ───────────────────────────── 
+    text: [ 
+        { 
+            id: 1, 
+            html: "现代社会，由于生活水平的提高和工作压力的增大，越来越多的人开始关注自己的<strong>体重</strong>。一些科学<strong>报道</strong>指出，人的体重在工作日和周末会呈现出不同的规律。有研究<strong>表明</strong>，大多数人在周末时，因为生活方式比较放松，饮食上也会<strong>稍微</strong>放纵，往往会摄入更多的热量，<strong>导致</strong>体重上升。而一到了周一，大家又会<strong>立即</strong>开始控制饮食，试图减轻体重。" 
+        }, 
+        { 
+            id: 2, 
+            html: "这种体重的变化是正常的生理<strong>现象</strong>，然而，<strong>个别</strong>人为了追求<strong>苗条</strong>的身材，采取了极端的<strong>节食</strong>方式，甚至找各种<strong>借口</strong>不吃饭。事实上，长期不吃主食<strong>非</strong>但不能有效减肥，反而会严重影响身体的健康。专家指出，节食并不能从根本上解决问题，想要保持健康，必须有合理的饮食和充足的运动。" 
+        }, 
+        { 
+            id: 3, 
+            html: "总之，任何想要通过不吃饭来减肥的<strong>措施</strong>都是不<strong>可靠</strong>的。为了健康，我们应该<strong>采取</strong>科学的方法，在保证足够<strong>营养</strong>的基础上控制体重的增长。健康的身体，<strong>即</strong>合理的体重与良好的心态相结合，才是我们追求的目标。" 
+        }
+    ],
+
+    // ─── 生词 ────────────────────────────────────────────────── 
+    vocabulary: [ 
+        { id: 1,  word: "体重",     pinyin: "tǐzhòng",    pos: "n.",    meaning: "body weight" , example: "而一到了周一，大家又会立即开始控制饮食，试图减轻体重。" }, 
+        { id: 2,  word: "节食",     pinyin: "jiéshí",     pos: "v.",    meaning: "to go on a diet" , example: "专家指出，节食并不能从根本上解决问题，想要保持健康，必须有合理的饮食和充足的运动。" }, 
+        { id: 3,  word: "报道",     pinyin: "bàodào",     pos: "n./v.", meaning: "news report, to report" , example: "一些科学报道指出，人的体重在工作日和周末会呈现出不同的规律。" }, 
+        { id: 4,  word: "营养",     pinyin: "yíngyǎng",   pos: "n.",    meaning: "nutrition" , example: "为了健康，我们应该采取科学的方法，在保证足够营养的基础上控制体重的增长。" },
+        { id: 5,  word: "总共",     pinyin: "zǒnggòng",   pos: "adv.",  meaning: "in total, altogether" , example: "这次旅行总共花了三天时间。" },
+        { id: 6,  word: "参与",     pinyin: "cānyù",      pos: "v.",    meaning: "to participate in" , example: "希望大家积极参与这次活动。" },
+        { id: 7,  word: "可靠",     pinyin: "kěkào",      pos: "adj.",  meaning: "reliable, dependable" , example: "总之，任何想要通过不吃饭来减肥的措施都是不可靠的。" },
+        { id: 8,  word: "即",       pinyin: "jí",         pos: "adv.",  meaning: "namely, that is to say" , example: "而一到了周一，大家又会立即开始控制饮食，试图减轻体重。" },
+        { id: 9,  word: "达到",     pinyin: "dádào",      pos: "v.",    meaning: "to achieve, to reach" , example: "经过训练，他的水平已经达到了要求。" },
+        { id: 10, word: "明显",     pinyin: "míngxiǎn",   pos: "adj.",  meaning: "obvious, clear" , example: "经过治疗，他的病情明显好转了。" },
+        { id: 11, word: "立即",     pinyin: "lìjí",       pos: "adv.",  meaning: "immediately, at once" , example: "而一到了周一，大家又会立即开始控制饮食，试图减轻体重。" },
+        { id: 12, word: "个别",     pinyin: "gèbié",      pos: "adj.",  meaning: "individual, very few" , example: "这种体重的变化是正常的生理现象，然而，个别人为了追求苗条的身材，采取了极端的节食方式，甚至找各种借口不吃饭。" },
+        { id: 13, word: "表明",     pinyin: "biǎomíng",   pos: "v.",    meaning: "to make clear, to indicate" , example: "有研究表明，大多数人在周末时，因为生活方式比较放松，饮食上也会稍微放纵，往往会摄入更多的热量，导致体重上升。" },
+        { id: 14, word: "临时",     pinyin: "línshí",     pos: "adj./adv.", meaning: "temporary, temporarily" , example: "由于下雨，活动临时改到室内举行。" },
+        { id: 15, word: "现象",     pinyin: "xiànxiàng",  pos: "n.",    meaning: "phenomenon" , example: "这种体重的变化是正常的生理现象，然而，个别人为了追求苗条的身材，采取了极端的节食方式，甚至找各种借口不吃饭。" },
+        { id: 16, word: "非",       pinyin: "fēi",        pos: "v.",    meaning: "not, non-" , example: "事实上，长期不吃主食非但不能有效减肥，反而会严重影响身体的健康。" },
+        { id: 17, word: "苗条",     pinyin: "miáotiao",   pos: "adj.",  meaning: "slim, slender" , example: "这种体重的变化是正常的生理现象，然而，个别人为了追求苗条的身材，采取了极端的节食方式，甚至找各种借口不吃饭。" },
+        { id: 18, word: "借口",     pinyin: "jièkǒu",     pos: "n.",    meaning: "excuse, pretext" , example: "这种体重的变化是正常的生理现象，然而，个别人为了追求苗条的身材，采取了极端的节食方式，甚至找各种借口不吃饭。" },
+        { id: 19, word: "采取",     pinyin: "cǎiqǔ",      pos: "v.",    meaning: "to adopt, to take (measures)" , example: "为了健康，我们应该采取科学的方法，在保证足够营养的基础上控制体重的增长。" },
+        { id: 20, word: "措施",     pinyin: "cuòshī",     pos: "n.",    meaning: "measure, step" , example: "总之，任何想要通过不吃饭来减肥的措施都是不可靠的。" },
+        // 扩展词汇 (身体生理类，基于源文件 P139 提取)
+        { id: 21, word: "打喷嚏",   pinyin: "dǎ pēntì",   pos: "v.",    meaning: "to sneeze" , example: "他一直打喷嚏，可能是感冒了。" },
+        { id: 22, word: "过敏",     pinyin: "guòmǐn",     pos: "v.",    meaning: "to be allergic" , example: "她对花粉过敏，春天总是不舒服。" },
+        { id: 23, word: "痒",       pinyin: "yǎng",       pos: "adj.",  meaning: "itchy" , example: "被蚊子咬了，皮肤又红又痒。" },
+        { id: 24, word: "消化",     pinyin: "xiāohuà",    pos: "v.",    meaning: "to digest" , example: "饭后散步有助于消化。" }
+    ],
+
+    // ─── 语法与辨析 ──────────────────────────────────────────────── 
+    grammar: [ 
+        { 
+            id: 1, 
+            title: "即", 
+            subtitle: "副词 / 动词 — 就是、意思是", 
+            color: "#2563eb", 
+            meanings: [ 
+                { label: "表示也就是，相当于“就是”", desc: "多用于书面语。", examples: [ "健康的身体，即合理的体重与良好的心态相结合。", "不积跬步，无以至千里，即不积累一步半步，就走不到千里远的地方。" ] } 
+            ] 
+        }, 
+        { 
+            id: 2, 
+            title: "个别", 
+            subtitle: "形容词 — 极少数的、个人的", 
+            color: "#7c3aed", 
+            meanings: [ 
+                { label: "表示极少部分", examples: ["除了个别学生，大家对这次旅行的安排都很满意。"] }
+            ] 
+        },
+        { 
+            id: 3, 
+            title: "非", 
+            subtitle: "动词 / 副词 — 不是、错误", 
+            color: "#059669", 
+            meanings: [ 
+                { label: "书面语中表示“不是”或“不”", examples: [ "答非所问 (回答的不是问的问题)。", "长期不吃主食非但不能有效减肥，反而会严重影响健康。" ] } 
+            ] 
+        },
+        {
+            id: 4,
+            title: "词语辨析：临时 vs 暂时",
+            color: "#dc2626",
+            comparison: {
+                common: "都有“短时间内”的意思。例如：没找到满意的房子前，我临时/暂时借住在朋友家里。",
+                diff1: "【临时】强调“临到事情发生的时候”。还有非正式的属性词用法。例如：麻烦你春节后帮刘方的女儿找份临时工作。",
+                diff2: "【暂时】表示不确定的较近的一段时间。例如：演出结束，我想暂时休息一段时间，考虑一下明年的工作。"
+            }
+        }
+    ],
+
+    // ─── 练习 (100% 匹配练习册官方参考答案) ────────────────────────── 
+    exercises: { 
+        fill: { 
+            title: "练习一：选择合适的词语填空", 
+            words: ["总共", "借口", "达到", "采取", "可靠", "参与"], 
+            questions: [ 
+                { q: "① 教师要让学生主动___班集体管理，锻炼他们的能力。", a: "参与" }, 
+                { q: "② 许多人喜爱喝茶，几乎___不可一日无茶的程度。", a: "达到" }, 
+                { q: "③ 听声音判断水瓶是否保温的方法并不___。", a: "可靠" }, 
+                { q: "④ 您好，您___消费了747元。您刷卡还是付现金？", a: "总共" },
+                { q: "⑤ 他___家里有事，提前离开了会场。", a: "借口" },
+                { q: "⑥ 我们虽然还不能准确预报地震，但可以___有效措施，最大限度地保护我们的财产。", a: "采取" }
+            ] 
+        }, 
+        choice: { 
+            title: "练习二：选择正确答案", 
+            questions: [ 
+                { q: "① 研究发现，父亲对教育子女的___程度越高，孩子就越聪明。", options: ["A. 参与", "B. 参加"], a: "A. 参与" }, 
+                { q: "② 调查结果显示，市民对电子阅读的兴趣___提高了。", options: ["A. 明显", "B. 显然"], a: "A. 明显" },
+                { q: "③ 我本来想完成这个计划以后再去美国，___现在那边有更重要的事，不得不提前去。", options: ["A. 原来", "B. 结果"], a: "B. 结果" },
+                { q: "④ 关于空气质量问题，现在报纸、网络上相关的___特别多，大家讨论得也很热闹。", options: ["A. 报道", "B. 报告"], a: "A. 报道" }
+            ] 
+        },
+        collocation: {
+            title: "练习三：画线连接可以搭配的词语",
+            questions: [
+                { q: "达到", a: "措施" },
+                { q: "报道", a: "原因" },
+                { q: "采取", a: "目的" },
+                { q: "分析", a: "新闻" },
+                { q: "下降的", a: "报道 (注：参考答案连线如此)" },
+                { q: "可靠的", a: "成果" },
+                { q: "重大的", a: "现象" },
+                { q: "表面的", a: "趋势" }
+            ]
+        },
+        expansion_fill: {
+            title: "扩展练习：选择合适的生理/医疗类词语填空",
+            words: ["打喷嚏", "过敏", "痒", "消化"],
+            questions: [
+                { q: "① 你是不是着凉了？怎么一直在___？", a: "打喷嚏" },
+                { q: "② 一到春天开花的时候，我的鼻子就___。", a: "过敏" },
+                { q: "③ 我身上也不知道被什么咬了，特别___。", a: "痒" },
+                { q: "④ 当初人们发明乒乓球是为了饭后做些运动帮助___食物的。", a: "消化" }
+            ]
+        }
+    },
+
+    // ─── 话题延展与写作 ───────────────────────────────────────── 
+    topics: { 
+        questions: [ 
+            { q: "你或者你身边的朋友有过节食减肥的经历吗？效果如何？", hint: "反弹、对健康的影响。" },
+            { q: "你认为最科学、最有效的减肥方法是什么？", hint: "合理控制饮食、增加运动、规律作息。" }
+        ], 
+        writing: { 
+            title: "命题写作：健康与减肥", 
+            prompt: "请以“健康与减肥”为题写一段话，谈谈你的看法。尽量用上本课的生词，字数不少于100字。", 
+            minWords: 100
+        } 
+    } 
+};

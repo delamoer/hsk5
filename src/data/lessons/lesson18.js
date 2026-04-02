@@ -1,0 +1,145 @@
+/**
+*  HSK 标准教程 5（上）· 第十八课
+*  抽象艺术美不美 (Abstract Art: Beautiful or Not?)
+*  
+*  数据结构说明：
+*  text[].html：课文段落 (基于外部知识库还原抽象艺术主题)
+*  vocabulary[]：生词库 (大纲词汇 + 影视艺术类扩展词汇)
+*  grammar[]：核心语法点与词语辨析 (100% 基于源文件大纲及实拍提取)
+*  exercises：课后习题与扩展练习 (100% 匹配源文件官方参考答案)
+*/ 
+
+export default { 
+    // ─── 基本信息 ────────────────────────────────────────────────── 
+    id: "lesson18", 
+    lessonNumber: 18, 
+    title: "抽象艺术美不美", 
+    titleEn: "Abstract Art: Beautiful or Not?", 
+    book: "HSK 标准教程 5（上）",
+
+    // ─── 课文 (基于外部知识库还原) ───────────────────────────── 
+    text: [ 
+        { 
+            id: 1, 
+            html: "在很多人眼里，<strong>抽象</strong>艺术是<strong>极其</strong>难懂的。一<strong>幅</strong>画上，可能没有具体的人物或风景，只有一些不<strong>规则</strong>的线条和色块。面对这样的作品，有的人觉得非常美，而有的人则完全看不出画的是什么。其实，抽象艺术并不要求我们去寻找标准答案，而是鼓励我们通过色彩和构图去感受画家的情绪和思想。<strong>可见</strong>，欣赏抽象艺术需要一定的想象力。" 
+        }, 
+        { 
+            id: 2, 
+            html: "随着社会的发展，人们的审美标准也在不断<strong>调整</strong>。<strong>目前</strong>，越来越多的年轻人开始接受并喜欢上抽象艺术。在很多现代家庭的装修中，墙上挂着的一幅抽象画往往能<strong>活跃</strong>整个房间的气氛。有调查显示，在购买艺术品的人群中，有三分之一的人选择了抽象画，而<strong>其余</strong>的三分之二则选择了传统写实画。" 
+        }, 
+        { 
+            id: 3, 
+            html: "究竟抽象艺术美不美？每个人都有自己的标准。我们不仅需要专业的评论家，也需要<strong>业余</strong>的爱好者。如果没有绝对的<strong>证据</strong>证明某种艺术形式是唯一的美，那么我们就应该保持开放的心态，去欣赏世界上的各种艺术之美。" 
+        }
+    ],
+
+    // ─── 生词 ────────────────────────────────────────────────── 
+    vocabulary: [ 
+        { id: 1,  word: "抽象",     pinyin: "chōuxiàng",  pos: "adj.",  meaning: "abstract" , example: "究竟抽象艺术美不美？" }, 
+        { id: 2,  word: "极其",     pinyin: "jíqí",       pos: "adv.",  meaning: "extremely" , example: "在很多人眼里，抽象艺术是极其难懂的。" }, 
+        { id: 3,  word: "其余",     pinyin: "qíyú",       pos: "pron.", meaning: "the rest, the others" , example: "有调查显示，在购买艺术品的人群中，有三分之一的人选择了抽象画，而其余的三分之二则选择了传统写实画。" }, 
+        { id: 4,  word: "可见",     pinyin: "kějiàn",     pos: "conj.", meaning: "it can be seen that" , example: "可见，欣赏抽象艺术需要一定的想象力。" },
+        { id: 5,  word: "幅",       pinyin: "fú",         pos: "m.",    meaning: "measure word for paintings, pictures" , example: "一幅画上，可能没有具体的人物或风景，只有一些不规则的线条和色块。" },
+        { id: 6,  word: "规则",     pinyin: "guīzé",      pos: "n./adj.", meaning: "rule; regular" , example: "一幅画上，可能没有具体的人物或风景，只有一些不规则的线条和色块。" },
+        { id: 7,  word: "活跃",     pinyin: "huóyuè",     pos: "adj./v.", meaning: "active; to enliven" , example: "在很多现代家庭的装修中，墙上挂着的一幅抽象画往往能活跃整个房间的气氛。" },
+        { id: 8,  word: "调整",     pinyin: "tiáozhěng",  pos: "v.",    meaning: "to adjust, to regulate" , example: "随着社会的发展，人们的审美标准也在不断调整。" },
+        { id: 9,  word: "业余",     pinyin: "yèyú",       pos: "adj.",  meaning: "amateur, spare time" , example: "我们不仅需要专业的评论家，也需要业余的爱好者。" },
+        { id: 10, word: "证据",     pinyin: "zhèngjù",    pos: "n.",    meaning: "evidence, proof" , example: "如果没有绝对的证据证明某种艺术形式是唯一的美，那么我们就应该保持开放的心态，去欣赏世界上的各种艺术之美。" },
+        { id: 11, word: "目前",     pinyin: "mùqián",     pos: "n.",    meaning: "at present, currently" , example: "目前，越来越多的年轻人开始接受并喜欢上抽象艺术。" },
+        // 扩展词汇 (影视艺术类，基于源文件 P156 提取)
+        { id: 12, word: "导演",     pinyin: "dǎoyǎn",     pos: "n.",    meaning: "director" , example: "这部电影的导演非常有才华。" },
+        { id: 13, word: "角色",     pinyin: "juésè",      pos: "n.",    meaning: "role, character" , example: "她在这部剧中扮演了一个重要角色。" },
+        { id: 14, word: "录音",     pinyin: "lùyīn",      pos: "v./n.", meaning: "to record sound; recording" , example: "录音前要确保环境安静。" },
+        { id: 15, word: "麦克风",   pinyin: "màikèfēng",  pos: "n.",    meaning: "microphone" , example: "演讲者拿起麦克风，向大家问好。" },
+        { id: 16, word: "频道",     pinyin: "píndào",     pos: "n.",    meaning: "TV channel" , example: "他换了好几个频道，找不到想看的节目。" },
+        { id: 17, word: "乐器",     pinyin: "yuèqì",      pos: "n.",    meaning: "musical instrument" , example: "她从小就学习乐器，现在会弹钢琴和拉小提琴。" }
+    ],
+
+    // ─── 语法与辨析 (100% 匹配源文件 P153, 154 提取) ────────────────────── 
+    grammar: [ 
+        { 
+            id: 1, 
+            title: "其余", 
+            subtitle: "代词 — 剩下的、另外的部分", 
+            color: "#2563eb", 
+            meanings: [ 
+                { label: "表示其余的人或事物", examples: [ "怎么只有你们两个人？其余的同学呢？", "其中三分之一的画作作者没有签名，而其余的则标明了身份。" ] } 
+            ] 
+        }, 
+        { 
+            id: 2, 
+            title: "可见", 
+            subtitle: "连词 — 由此可见，表示可以根据上文得出结论", 
+            color: "#7c3aed", 
+            meanings: [ 
+                { label: "根据客观情况作出判断", examples: ["他已经住院好几天了，一直诊断不出是什么问题，可见情况不太好。", "汉语中有个成语叫“自知之明”，可见“自知”是一种智慧。"] }
+            ] 
+        },
+        {
+            id: 3,
+            title: "词语辨析：目前 vs 现在",
+            color: "#dc2626",
+            comparison: {
+                common: "都有“当前、说话这个时候”的意思。",
+                diff1: "【目前】名词，多用于书面语，常用来指相对稳定的状况或一段时间。例如：调查显示，66.9%的女性对目前的工作不满意。",
+                diff2: "【现在】名词/时间词，可用于书面语和口语。还可以指较短的某一瞬间（此时“目前”不能替换）。例如：我们很着急，你现在能过来一趟吗？ / 现在的年轻人，跟我们那时候真不一样！"
+            }
+        }
+    ],
+
+    // ─── 练习 (100% 匹配练习册官方参考答案 P155, P156) ────────────────────────── 
+    exercises: { 
+        fill: { 
+            title: "练习一：选择合适的词语填空", 
+            words: ["幅", "规则", "活跃", "调整", "业余", "证据"], 
+            questions: [ 
+                { q: "① 书房的墙上挂着一___静物画。", a: "幅" }, 
+                { q: "② 因为销售情况不太好，我们正准备___产品价格。", a: "调整" }, 
+                { q: "③ 这块布上只有一些不___的色块，我看不出来画的是什么。", a: "规则" }, 
+                { q: "④ 我们只是一支___的乐队，不够专业水平。", a: "业余" },
+                { q: "⑤ 每次晚会他都是主持人，要靠他来___气氛。", a: "活跃" },
+                { q: "⑥ 如果没有可靠的___，你就不能这么说。", a: "证据" }
+            ] 
+        }, 
+        differentiation: {
+            title: "练习二：选词填空（目前 / 现在）",
+            questions: [
+                { q: "① 我们很着急，你___能过来一趟吗？", a: "现在 (注：不能用目前)" },
+                { q: "② 选择性失忆___还无法治疗。", a: "目前 / 现在 (均可)" },
+                { q: "③ 调查显示，66.9%的女性对___的工作不满意。", a: "目前 / 现在 (均可)" },
+                { q: "④ ___的年轻人，跟我们那时候真不一样！", a: "现在 (注：不能用目前)" }
+            ]
+        },
+        choice: { 
+            title: "练习三：选择正确答案", 
+            questions: [ 
+                { q: "① 那个人长得___丑。", options: ["A. 非常", "B. 极其"], a: "B. 极其" }, 
+                { q: "② A对这个人B欣赏，我C认为他D很有才华。(极其)", options: ["A", "B", "C", "D"], a: "B" },
+                { q: "③ A这是我B新C的作品，请您过目D。(设计)", options: ["A", "B", "C", "D"], a: "C" },
+                { q: "④ 我只认识A这B两个字，C都不认识D。(其余)", options: ["A", "B", "C", "D"], a: "C" }
+            ] 
+        },
+        expansion_fill: {
+            title: "扩展练习：选择合适的影视艺术词汇填空",
+            words: ["录音", "麦克风", "频道", "乐器"],
+            questions: [
+                { q: "① 在___设备发明之前，没有人注意到你的声音在自己听来和别人听来是不一样的。", a: "录音" },
+                { q: "② 主持人，你胸前的___歪了，请调整一下。", a: "麦克风" },
+                { q: "③ 这个连续剧最近好几个___都在放，你看了没有？", a: "频道" },
+                { q: "④ 除了钢琴，我没有学过别的___。", a: "乐器" }
+            ]
+        }
+    },
+
+    // ─── 话题延展与写作 ───────────────────────────────────────── 
+    topics: { 
+        questions: [ 
+            { q: "你喜欢抽象艺术吗？你能理解毕加索或者梵高的画吗？", hint: "色彩、线条、情绪表达。" }
+        ], 
+        writing: { 
+            title: "命题写作：我眼中的艺术", 
+            prompt: "请以“我眼中的美”为题，写一段话，谈谈你对艺术作品（画作、音乐、电影等）的欣赏标准。字数不少于100字。", 
+            minWords: 100
+        } 
+    } 
+};

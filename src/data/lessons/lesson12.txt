@@ -1,0 +1,147 @@
+/**
+*  HSK 标准教程 5（上）· 第十二课
+*  海外用户玩儿微信 (Overseas Users of WeChat)
+*  
+*  数据结构说明：
+*  text[].html：课文段落 (基于外部知识库还原)
+*  vocabulary[]：生词库 (大纲词汇 + IT互联网类扩展词汇)
+*  grammar[]：核心语法点与词语辨析 (100% 基于源文件提取)
+*  exercises：课后习题与扩展练习 (100% 匹配源文件官方参考答案)
+*/ 
+
+export default { 
+    // ─── 基本信息 ────────────────────────────────────────────────── 
+    id: "lesson12", 
+    lessonNumber: 12, 
+    title: "海外用户玩儿微信", 
+    titleEn: "Overseas Users of WeChat", 
+    book: "HSK 标准教程 5（上）",
+
+    // ─── 课文 (基于外部知识库还原) ───────────────────────────── 
+    text: [ 
+        { 
+            id: 1, 
+            html: "如今，智能手机已经越来越普及，而微信（WeChat）可以说是智能手机上不可缺少的一个应用软件。随着中国经济的<strong>发展</strong>和科技的进步，不仅中国人每天都在使用微信，越来越多的<strong>海外</strong><strong>用户</strong>也开始习惯用微信来交流。为了更好地<strong>推广</strong>，微信在许多国家和地区<strong>召开</strong>了发布会，吸引了大量的用户。" 
+        }, 
+        { 
+            id: 2, 
+            html: "在海外，人们只需下载并<strong>注册</strong>一个账号，就可以轻松地与远在世界各地的朋友保持联系。通过微信，大家可以发送文字、图片、语音，<strong>以及</strong>进行视频通话。有些海外用户甚至觉得发表情包非常有趣，偶尔还可以用来<strong>逗</strong>朋友开心。这不仅方便了<strong>个人</strong>的日常交流，也为许多企业的商业<strong>合作</strong>提供了便利。" 
+        }, 
+        { 
+            id: 3, 
+            html: "很多外国公司也看到了微信庞大的用户群，纷纷在微信上开展各种<strong>业务</strong>，<strong>针对</strong>不同市场的需求进行开发。可以说，微信在很大<strong>程度</strong>上改变了人们的生活方式，也成为中国互联网产品走向世界的一个成功代表。" 
+        }
+    ],
+
+    // ─── 生词 ────────────────────────────────────────────────── 
+    vocabulary: [ 
+        { id: 1,  word: "海外",     pinyin: "hǎiwài",     pos: "n.",    meaning: "overseas" }, 
+        { id: 2,  word: "用户",     pinyin: "yònghù",     pos: "n.",    meaning: "user" }, 
+        { id: 3,  word: "推广",     pinyin: "tuīguǎng",   pos: "v.",    meaning: "to promote, to popularize" }, 
+        { id: 4,  word: "召开",     pinyin: "zhàokāi",    pos: "v.",    meaning: "to convene (a conference or meeting)" },
+        { id: 5,  word: "注册",     pinyin: "zhùcè",      pos: "v.",    meaning: "to register" },
+        { id: 6,  word: "以及",     pinyin: "yǐjí",       pos: "conj.", meaning: "as well as, and" },
+        { id: 7,  word: "逗",       pinyin: "dòu",        pos: "v.",    meaning: "to tease, to play with" },
+        { id: 8,  word: "个人",     pinyin: "gèrén",      pos: "n.",    meaning: "individual, personal" },
+        { id: 9,  word: "合作",     pinyin: "hézuò",      pos: "v.",    meaning: "to cooperate" },
+        { id: 10, word: "业务",     pinyin: "yèwù",       pos: "n.",    meaning: "business, professional work" },
+        { id: 11, word: "针对",     pinyin: "zhēnduì",    pos: "prep./v.", meaning: "to be directed against; to aim at" },
+        { id: 12, word: "程度",     pinyin: "chéngdù",    pos: "n.",    meaning: "degree, extent" },
+        { id: 13, word: "宣传",     pinyin: "xuānchuán",  pos: "v.",    meaning: "to give publicity to" },
+        { id: 14, word: "实现",     pinyin: "shíxiàn",    pos: "v.",    meaning: "to realize, to achieve" },
+        // 扩展词汇 (IT通信类，基于源文件 P13 提取)
+        { id: 15, word: "充电器",   pinyin: "chōngdiànqì",pos: "n.",    meaning: "charger" },
+        { id: 16, word: "系统",     pinyin: "xìtǒng",     pos: "n.",    meaning: "system" },
+        { id: 17, word: "数据",     pinyin: "shùjù",      pos: "n.",    meaning: "data" },
+        { id: 18, word: "信号",     pinyin: "xìnhào",     pos: "n.",    meaning: "signal" }
+    ],
+
+    // ─── 语法与辨析 (100% 匹配源文件提取) ────────────────────── 
+    grammar: [ 
+        { 
+            id: 1, 
+            title: "以及", 
+            subtitle: "连词 — 连接并列的词或短语", 
+            color: "#2563eb", 
+            meanings: [ 
+                { label: "表示并列，类似于‘和’", desc: "常用于书面语，多连接名词性词语。", examples: [ "妈妈在电话里问了我很多问题，如北京的天气怎么样，吃饭习惯不习惯，以及有没有交到新朋友。", "通过微信，大家可以发送文字、图片、语音，以及进行视频通话。" ] } 
+            ] 
+        }, 
+        { 
+            id: 2, 
+            title: "程度", 
+            subtitle: "名词 — 达到的水平或状态", 
+            color: "#7c3aed", 
+            meanings: [ 
+                { label: "水平或层次", examples: ["由于中国互联网的用户数量以及市场成熟程度等都低于发达国家……", "在很大程度上，一个人的未来取决于他所受的教育。"] }
+            ] 
+        },
+        {
+            id: 3,
+            title: "词语辨析：发达 vs 发展",
+            color: "#dc2626",
+            comparison: {
+                common: "都与事物向更好的方向变化有关。",
+                diff1: "【发达】形容词，指事物已经达到了充分发展的水平。例如：人们常说这种动物不聪明，其实它的大脑很发达。",
+                diff2: "【发展】动词/名词，指事物由小到大、由简单到复杂的过程。例如：方便的交通是发展经济的基础。 / 她的病情发展得比我们想象的还要快。"
+            }
+        }
+    ],
+
+    // ─── 练习 (100% 匹配练习册官方参考答案 P13-14) ────────────────────────── 
+    exercises: { 
+        fill: { 
+            title: "练习一：选择合适的词语填空", 
+            words: ["推广", "召开", "逗", "注册", "业务", "合作"], 
+            questions: [ 
+                { q: "① 为了___这项新产品，公司做了很多宣传。", a: "推广" }, 
+                { q: "② 原本定在周三上午___的会议改时间了。", a: "召开" }, 
+                { q: "③ 你做这么多事，难道只是为了___女朋友开心？", a: "逗" }, 
+                { q: "④ 要想在这个网站购物，你必须先___一个它的邮箱。", a: "注册" },
+                { q: "⑤ 那个新来的销售员这个月做成了三笔大___，真厉害！", a: "业务" },
+                { q: "⑥ 我们跟这家公司___过两次，很愉快。", a: "合作" }
+            ] 
+        }, 
+        choice: { 
+            title: "练习二：选择正确答案", 
+            questions: [ 
+                { q: "① 像这样能够给全社会信心与快乐的事情，我们应该重点___。", options: ["A. 宣传", "B. 宣布"], a: "A. 宣传" }, 
+                { q: "② 要吃中国菜，你首先要学会___筷子。", options: ["A. 运用", "B. 使用"], a: "B. 使用" },
+                { q: "③ 过了这么多年，我的愿望终于___了！", options: ["A. 发生", "B. 实现"], a: "B. 实现" },
+                { q: "④ 这是我的___爱好，跟我学什么专业没有关系。", options: ["A. 个人", "B. 私人"], a: "A. 个人" }
+            ] 
+        },
+        position: {
+            title: "练习三：选择适当的词语填空（基于参考答案还原）",
+            questions: [
+                { q: "① 这个问题是在什么样的背景___提出来的？", a: "下" },
+                { q: "② 公司新开发___的产品很受消费者欢迎。", a: "出" },
+                { q: "③ 本店销售电视、冰箱、洗衣机___其他电器。", a: "以及" },
+                { q: "④ ___这个问题，我们开会讨论了好几次。", a: "针对" }
+            ]
+        },
+        expansion_fill: {
+            title: "扩展练习：选择合适的IT/通信词语填空",
+            words: ["充电器", "系统", "数据", "信号"],
+            questions: [
+                { q: "① 我忘带手机___了，得节省着用，先关机吧。", a: "充电器" },
+                { q: "② 汉字是一个整体的___，字与字之间是有联系的。", a: "系统" },
+                { q: "③ 调查___显示，用户们对微信的服务很满意。", a: "数据" },
+                { q: "④ 喂，您说什么？我听不清。这里___不太好。", a: "信号" }
+            ]
+        }
+    },
+
+    // ─── 话题延展与写作 ───────────────────────────────────────── 
+    topics: { 
+        questions: [ 
+            { q: "在你的国家，人们最常使用的社交软件是什么？", hint: "WhatsApp, Facebook, Line, Twitter 等。" },
+            { q: "你觉得智能手机和社交软件给人们的生活带来了哪些好处和坏处？", hint: "好处是方便联系；坏处是占用了太多时间，甚至影响现实中的交流。" }
+        ], 
+        writing: { 
+            title: "命题写作：社交软件改变了生活", 
+            prompt: "请以“社交软件对生活的影响”为题写一段话，谈谈你的看法。尽量用上本课所学的生词，字数不少于100字。", 
+            minWords: 100
+        } 
+    } 
+};

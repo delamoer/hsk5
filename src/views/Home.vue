@@ -141,6 +141,7 @@ export default {
   &__subtitle {
     font-size: 13px !important;
     color: #64748b !important;
+    padding-top: 8px !important;
   }
 
   &__meta {
