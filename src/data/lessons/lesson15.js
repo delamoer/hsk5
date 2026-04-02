@@ -163,7 +163,8 @@ export default {
         writing: { 
             title: "命题写作：经验与理论", 
             prompt: "请以“经验与理论”为题写一段话，谈谈你的看法。尽量用上本课的生词，字数不少于100字。", 
-            minWords: 100
+            minWords: 100,
+            suggestedWords: [ "理论", "道理", "迟早", "形势", "挑战", "绝对", "弱" ]
         } 
     } 
 };

@@ -160,7 +160,8 @@ export default {
         writing: { 
             title: "命题写作：健康与减肥", 
             prompt: "请以“健康与减肥”为题写一段话，谈谈你的看法。尽量用上本课的生词，字数不少于100字。", 
-            minWords: 100
+            minWords: 100,
+            suggestedWords: [ "体重", "节食", "营养", "参与", "可靠", "达到", "明显", "表明" ]
         } 
     } 
 };

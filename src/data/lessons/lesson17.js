@@ -130,7 +130,8 @@ export default {
         writing: { 
             title: "命题写作：结尾的艺术", 
             prompt: "请以“结尾的艺术”为题，结合“峰终定律”，写一段话谈谈你的看法。字数不少于100字。", 
-            minWords: 100
+            minWords: 100,
+            suggestedWords: [ "运用", "集中", "体会", "忽视", "平常", "轻视", "宁可" ]
         } 
     } 
 };

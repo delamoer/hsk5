@@ -101,13 +101,13 @@ export default {
     },
     stats() {
       if (!this.lesson) return [];
+      const ex = this.lesson.exercises;
+      const fillCount = ex.fill ? ex.fill.questions.length : 0;
+      const choiceCount = ex.choice ? ex.choice.questions.length : 0;
       return [
         { label: "生词",  value: `${this.lesson.vocabulary.length} 个` },
         { label: "语法点", value: `${this.lesson.grammar.length} 个` },
-        { label: "练习",  value: `${
-          this.lesson.exercises.fill.questions.length +
-          this.lesson.exercises.choice.questions.length
-        } 题` },
+        { label: "练习",  value: `${fillCount + choiceCount} 题` },
       ];
     },
   },

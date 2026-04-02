@@ -1,5 +1,6 @@
 <template>
   <div ref="panel" class="topic-panel">
+    <template v-if="topics">
     <h3 class="topic-panel__heading">话题讨论：水与我们的生活</h3>
     <p class="topic-panel__tip">思考以下问题，可以用本课学到的词语展开讨论。</p>
 
@@ -56,7 +57,7 @@
         </div>
 
         <!-- 推荐词语 -->
-        <div class="writing-suggestions">
+        <div v-if="topics.writing.suggestedWords && topics.writing.suggestedWords.length" class="writing-suggestions">
           <div class="writing-suggestions__label">可参考的词语：</div>
           <div class="writing-suggestions__chips">
             <v-chip
@@ -89,6 +90,7 @@
       </v-btn>
       <span class="download-tip">将话题讨论与你的短文保存为图片</span>
     </div>
+    </template>
   </div>
 </template>
 
@@ -100,7 +102,8 @@ export default {
   props: {
     topics: {
       type: Object,
-      required: true,
+      required: false,
+      default: null,
     },
     lessonId: {
       type: String,
